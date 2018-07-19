@@ -1,11 +1,12 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('error') {
       steps {
         echo 'Hello'
         sh '''#!/bin/bash
 echo "What"'''
+        input(message: 'Sure ?', ok: 'ok')
       }
     }
   }
